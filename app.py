@@ -9,7 +9,7 @@ import dash_bootstrap_components as dbc
 
 ## Chargement des données ##
 
-df = pd.read_csv("C:/Users/samue/OneDrive/Documents/Cours/M1 ECAP/Python avancée/projet/supermarket_sales.csv")
+df = pd.read_csv("supermarket_sales.csv")
 df["Date"] = pd.to_datetime(df["Date"])
 df["Week"] = df["Date"].dt.to_period("W").apply(lambda x: x.start_time)
 
